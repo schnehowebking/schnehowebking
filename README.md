@@ -1,7 +1,7 @@
 <h1>About Me<h1>
 
 <p>
-- 👋 Hi, I’m Schnehowebking<br>
+- 👋 Hi, I’m Md Hasib Un Nabi Schneho Khan<br>
 - 👀 I’m interested in python<br>
 - 🌱 I’m currently learning python<br>
 - 💞️ I’m looking to collaborate on python projects<br>
