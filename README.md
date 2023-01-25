@@ -25,11 +25,15 @@
 
 ### :man_technologist: About Me :
 I am a Full Stack Web Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Rangpur, Bangladesh.
-- :telescope: I’m working as a Software Engineer and contributing to frontend and backend for building web applications.
+- 🔭 I’m working as a Full-Stack Web Developer and contributing to frontend and backend for building web applications.
 
-- :seedling: Exploring Technical Content Writing.
+- 🌱 Exploring Technical Content Writing.
 
-- :zap: In my free time, I solve problems on GeeksforGeeks and read tech articles.
+- ⚡ In my free time, I solve problems on GeeksforGeeks, Fiverr, Upwork and read tech articles.
+
+- 👨‍🎓 Student of Rangpur Engineering College.
+
+- 🥇 Got Certificate From HackerRank on Python..
 
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/WhatsApp-WhatsApp-green)](https://wa.me/8801568251855) [![Linkedin Badge](https://img.shields.io/badge/Email-Email-yellow)](mailto:schnehowebking@gmail.com)
 ---
