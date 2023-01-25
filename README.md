@@ -1,4 +1,6 @@
-<div id="header" align="center">
+<div  align="center"><h3>Assalamu Alaikum!!! Welcome To My GitHub Profile...</h3></div>
+
+<br><div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
 <div id="badges" align="center">
@@ -21,7 +23,7 @@
 
 ---
 
-### :woman_technologist: About Me :
+### :man_technologist: About Me :
 I am a Full Stack Web Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Rangpur, Bangladesh.
 - :telescope: I’m working as a Software Engineer and contributing to frontend and backend for building web applications.
 
