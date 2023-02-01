@@ -17,7 +17,7 @@
 </div>
 <div align="center">
   <img id="badges" src="https://komarev.com/ghpvc/?username=schnehowebking&style=flat-square&color=red" alt=""/>
-  <p>Visitors Count</p>
+  <p>Total Visitors Count</p>
   <img id="badges" src="https://camo.githubusercontent.com/25eac3b6a48df9b23361192995aa6b8600d00ac8d75030171d59974ce3beb47c/68747470733a2f2f70726f66696c652d636f756e7465722e676c697463682e6d652f696e736f6c6974756d2f636f756e742e737667" alt=""/>
 </div>
 <div align="center">
