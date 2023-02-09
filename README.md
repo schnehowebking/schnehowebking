@@ -36,7 +36,7 @@ I am a Full Stack Web Developer <img src="https://media.giphy.com/media/WUlplcMp
 
 - 👨‍🎓 Student of Rangpur Engineering College.
 
-- 🥇 Got Certificate From HackerRank on Python..
+- 🥇 Got Certificate From HackerRank on Python & JavaScript..
 
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/WhatsApp-WhatsApp-green)](https://wa.me/8801568251855) [![Linkedin Badge](https://img.shields.io/badge/Email-Email-yellow)](mailto:schnehowebking@gmail.com)
 ---
