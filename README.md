@@ -20,7 +20,7 @@
   
 </div>
 <div align="center">
-  [![trophy](https://github-profile-trophy.vercel.app/?username=schnehowebking)](https://github.com/ryo-ma/github-profile-trophy)
+  <img src="https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=onestar">
   <img src="https://media.giphy.com/media/RbDKaczqWovIugyJmW/giphy.gif" width="600" height="300"/>
 </div>
 
