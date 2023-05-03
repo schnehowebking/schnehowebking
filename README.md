@@ -20,8 +20,8 @@
   
 </div>
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=onestar">
-  <img src="https://media.giphy.com/media/RbDKaczqWovIugyJmW/giphy.gif" width="600" height="300"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=schnehowebking&theme=onestar">
+<!--   <img src="https://media.giphy.com/media/RbDKaczqWovIugyJmW/giphy.gif" width="600" height="300"/> -->
 </div>
 
 ---
