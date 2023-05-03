@@ -17,10 +17,10 @@
 </div>
 <div align="center">
   <img id="badges" src="https://komarev.com/ghpvc/?username=schnehowebking&style=flat-square&color=red" alt=""/>
-  <p>Total Visitors Count</p>
   
 </div>
 <div align="center">
+  [![trophy](https://github-profile-trophy.vercel.app/?username=schnehowebking)](https://github.com/ryo-ma/github-profile-trophy)
   <img src="https://media.giphy.com/media/RbDKaczqWovIugyJmW/giphy.gif" width="600" height="300"/>
 </div>
 
