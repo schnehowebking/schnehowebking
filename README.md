@@ -1,12 +1,12 @@
 <img src="https://raw.githubusercontent.com/BEPb/BEPb/5c63fa170d1cbbb0b1974f05a3dbe6aca3f5b7f3/assets/Bottom_up.svg" width="100%" />
 <h1 align="center">Assalamu Alaikum 👋, I'm Md Hasib Un Nabi (Schneho)</h1>
-<h3 align="center">Software Developer</h3>
+<h3 align="center">Python, Django Centric Software Developer</h3>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=schnehowebking&label=Profile%20views&color=0e75b6&style=flat" alt="schnehowebking" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=schnehowebking&theme=dark_lover" alt="schnehowebking" /></a> </p>
 
-- 👯 I’m looking to collaborate on **Django, Laravel Projects**
-- 🤝 I’m looking for help with **Django, Laravel**
+- 👯 I’m looking to collaborate on **Python, Django Projects**
+- 🤝 I’m looking for help with **Python, Django**
 - 🌱 I’m currently learning **.Net**
 - 💬 Ask me about **C, C++, Python, PHP, JavaScript, Django, Laravel**
 - 📫 How to reach me **schnehowbeking@gmail.com**
