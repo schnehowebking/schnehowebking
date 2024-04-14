@@ -1,4 +1,4 @@
-<img src="https://media.licdn.com/dms/image/D5616AQGlUsDH5FwFIw/profile-displaybackgroundimage-shrink_350_1400/0/1707312986478?e=1712793600&v=beta&t=VANa4MMV6rK-Sn16nkv6hhhcGDanR9GNEdFSUONDoVQ" width="100%" />
+<img src="./Takehiro.png" width="100%" />
 <h1 align="center">Assalamu Alaikum 👋, I'm Md Hasib Un Nabi (Schneho)</h1>
 <h3 align="center">Python, Django Centric Software Developer</h3>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=schnehowebking&label=Profile%20views&color=0e75b6&style=flat" alt="schnehowebking" /> </p>
