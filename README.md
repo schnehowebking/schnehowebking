@@ -1,6 +1,6 @@
 <img src="./wallimageo.png" width="100%" />
 <h1 align="center">Assalamu Alaikum 👋, I'm Md Hasib Un Nabi (Schneho)</h1>
-<h3 align="center">Python, Django Centric Software Developer</h3>
+<h3 align="center">Cybersecurity & OSINT Expert | Penetration Tester | Full-stack Software Developer</h3>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=schnehowebking&label=Profile%20views&color=0e75b6&style=flat" alt="schnehowebking" /> </p>
 <img src="https://tryhackme-badges.s3.amazonaws.com/w3bk1n6.png" alt="Your Image Badge" />
 
