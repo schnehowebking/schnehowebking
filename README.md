@@ -5,6 +5,13 @@
 <img src="https://tryhackme-badges.s3.amazonaws.com/w3bk1n6.png" alt="Your Image Badge" />
 
 
+
+
+<img src="https://raw.githubusercontent.com/schnehowebking/schnehowebking/output/snake.svg" alt="Snake animation" />
+
+###
+
+
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=schnehowebking&theme=dark_lover" alt="schnehowebking" /></a> </p>
 
 - 👯 I’m looking to collaborate on **Python, Django Projects**
