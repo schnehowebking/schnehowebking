@@ -20,7 +20,7 @@
 - 💬 Ask me about **C, C++, Python, PHP, JavaScript, Django, Laravel**
 - 📫 How to reach me **mdhasibunnabischneho@gmail.com**
 - 👨‍💻 All of my projects are available at **https://mdhasibunnabischneho.netlify.app/**
-- 📝 I regularly write articles on **https://islamiyahtech.com/**
+- 📝 I regularly write articles on **https://islamiyahtechs.com/**
 - 📄 Know about my experiences **#**
 - ⚡ Fun fact **I always forget how I coded the day before**
 
