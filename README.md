@@ -4,7 +4,7 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=schnehowebking&label=Profile%20views&color=0e75b6&style=flat" alt="schnehowebking" /> </p>
 <p align="center">
   <a href="https://tryhackme.com/p/schneho">
-    <img src="https://tryhackme-badges.s3.amazonaws.com/914563.png" alt="TryHackMe Badge"/>
+    <img src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563" alt="TryHackMe Badge"/>
   </a>
 </p>
 
