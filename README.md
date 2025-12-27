@@ -2,8 +2,11 @@
 <h1 align="center">Assalamu Alaikum 👋, I'm Md Hasib Un Nabi (Schneho)</h1>
 <h3 align="center">Cybersecurity & OSINT Expert | Penetration Tester | Full-stack Software Developer</h3>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=schnehowebking&label=Profile%20views&color=0e75b6&style=flat" alt="schnehowebking" /> </p>
-[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/914563.png)](https://tryhackme.com/p/schneho)
-
+<p align="center">
+  <a href="https://tryhackme.com/p/schneho">
+    <img src="https://tryhackme-badges.s3.amazonaws.com/914563.png" alt="TryHackMe Badge"/>
+  </a>
+</p>
 
 
 <img src="https://raw.githubusercontent.com/schnehowebking/schnehowebking/output/snake.svg" alt="Snake animation" />
