@@ -15,9 +15,6 @@
 
 ###
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=schnehowebking&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=schnehowebking&theme=dark_lover" alt="schnehowebking" /></a> </p>
-
 - 👯 I’m looking to collaborate on **Python, Django Projects**
 - 🤝 I’m looking for help with **Python, Django**
 - 🌱 I’m currently learning **.Net**
