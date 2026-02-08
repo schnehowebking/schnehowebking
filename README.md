@@ -6,7 +6,8 @@
 
 <p align="center">
   <a href="https://tryhackme.com/p/w3bk1n9">
-    <img src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563" alt="TryHackMe Badge" />
+    
+  <img src="./tryhackme-badge.svg" alt="TryHackMe Badge" width="350">
   </a>
 </p>
 
