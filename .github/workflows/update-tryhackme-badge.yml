@@ -1,23 +1,27 @@
-name: Update TryHackMe Badge (1m)
+name: Update TryHackMe Badge
 
 on:
   schedule:
-    - cron: "* * * * *"   # every 1 minute
+    - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
   update-badge:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download TryHackMe badge
+      - name: Download and fix TryHackMe badge
         run: |
           curl -L \
           "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563" \
           -o tryhackme-badge.svg
+
+          sed -i 's/crossorigin>/crossorigin="anonymous">/g' tryhackme-badge.svg
 
       - name: Commit badge if changed
         run: |
