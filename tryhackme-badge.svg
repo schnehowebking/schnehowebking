@@ -1,0 +1,235 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<div id="thm-badge" role="button" tabindex="0" aria-label="user avatar">
+  <div class="thm-avatar-outer">
+    <div class="thm-avatar"></div>
+  </div>
+  <div class="badge-user-details">
+    <div class="title-wrapper">
+      <span class="user_name">w3bk1n9</span>
+      <div>
+        <i class="fa-solid fa-bolt-lightning rank-icon"></i>
+        <span class="rank-title">[0xD]</span>
+      </div>
+    </div>
+    <div class="details-wrapper">
+      <div class="details-icon-wrapper">
+        <i class="fa-solid fa-trophy detail-icons trophy-icon"></i>
+        <span class="details-text">7955</span>
+      </div>
+      <div class="details-icon-wrapper">
+        <i class="fa-solid fa-fire detail-icons fire-icon"></i>
+        <span class="details-text">49 days</span>
+      </div>
+      <div class="details-icon-wrapper">
+        <i class="fa-solid fa-award detail-icons award-icon"></i>
+        <span class="details-text">17</span>
+      </div>
+      <div class="details-icon-wrapper">
+        <i class="fa-solid fa-door-closed detail-icons door-closed-icon"></i>
+        <span class="details-text">210</span>
+      </div>
+    </div>
+    <a href="https://tryhackme.com" class="thm-link" target="_blank">tryhackme.com</a>
+  </div>
+</div>
+<style>
+  body {
+    width: 329px;
+    height: 88px;
+    margin: 0;
+  }
+
+  #thm-badge {
+    width: 327px;
+    height: 84px;
+    background-image: url('https://tryhackme.com/img/thm_public_badge_bg.svg');
+    background-size: cover;
+    object-fit: fill;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .thm-avatar-outer {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 0;
+    background: linear-gradient(to bottom left, #a3ea2a, #2e4463);
+    padding: 2px;
+    margin-left: 10px;
+  }
+
+  .thm-avatar {
+    background-image: url(https://tryhackme-images.s3.amazonaws.com/user-avatars/61f764e92b646300502797b8-1764535109666);
+    display: block;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    box-sizing: content-box; /* Needed for border to stop changing image width*/
+    background-color: #121212;
+    object-fit: cover;
+    box-shadow: 0 0 3px 0 #303030;
+  }
+
+  .badge-user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .details-icon-wrapper {
+    display: flex;
+    gap: 5px;
+  }
+
+  .details-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .user_name {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #f9f9fb;
+    transform: rotate(0.2deg);
+
+    max-width: 135px;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .rank-icon {
+    width: 8px;
+    height: 10px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+
+    color: #ffbb45;
+    transform: rotate(0.2deg);
+  }
+
+  .rank-title {
+    font-family: Ubuntu, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #ffffff;
+    transform: rotate(0.2deg);
+  }
+
+  .detail-icons {
+    font-weight: 900;
+    text-align: center;
+
+    transform: rotate(0.2deg);
+  }
+
+  .trophy-icon {
+    color: #9ca4b4;
+    width: 13px;
+    height: 13px;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  .fire-icon {
+    width: 12px;
+    height: 13px;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 13px;
+    color: #a3ea2a;
+  }
+
+  .award-icon {
+    width: 10px;
+    height: 13px;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 13px;
+    color: #d752ff;
+  }
+
+  .door-closed-icon {
+    width: 14px;
+    height: 12px;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: #719cf9;
+  }
+
+  .details-text {
+    font-family: Ubuntu, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #ffffff;
+    transform: rotate(0.2deg);
+  }
+
+  .thm-link {
+    text-decoration: none;
+    font-family: Ubuntu, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0;
+
+    color: #f9f9fb;
+    transform: rotate(0.2deg);
+  }
+
+  .thm-link:hover {
+    text-decoration: underline;
+  }
+</style>
+<script>
+  document.getElementById('thm-badge').addEventListener('click', function ({ target }) {
+    if (target.tagName === 'A') {
+      // If it's an anchor, do nothing here and let the default action proceed
+      return;
+    }
+    window.open('https://tryhackme.com/p/w3bk1n9', '_blank');
+  });
+</script>
