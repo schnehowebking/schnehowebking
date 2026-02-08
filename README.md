@@ -4,11 +4,7 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=schnehowebking&label=Profile%20views&color=0e75b6&style=flat" alt="schnehowebking" /> </p>
 
 
-<p align="center">
-  <a href="https://tryhackme.com/p/w3bk1n9">
-    https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563
-  </a>
-</p>
+[![TryHackMe Badge](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563)](https://tryhackme.com/p/w3bk1n9)
 
 
 <img src="https://raw.githubusercontent.com/schnehowebking/schnehowebking/output/snake.svg" alt="Snake animation" />
