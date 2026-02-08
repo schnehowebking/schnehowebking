@@ -6,8 +6,7 @@
 
 <p align="center">
   <a href="https://tryhackme.com/p/w3bk1n9">
-    
-  <img src="./tryhackme-badge.svg" alt="TryHackMe Badge" width="350">
+    <img src="https://raw.githubusercontent.com/w3bk1n9/w3bk1n9/main/tryhackme-badge.png">
   </a>
 </p>
 
