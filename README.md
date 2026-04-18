@@ -15,6 +15,12 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://tryhackme.com/p/w3bk1n9">
+    <img src="./tryhackme-badge.png" alt="TryHackMe badge" />
+  </a>
+</p>
+
 ## About Me
 
 I am a cybersecurity-focused developer with experience in penetration testing, OSINT, backend development, and web application engineering. I enjoy building secure systems, exploring attack surfaces, and working on practical software that solves real problems.
@@ -47,7 +53,7 @@ I am a cybersecurity-focused developer with experience in penetration testing, O
 
 **Languages**
 
-`C` `C++` `Python` `PHP` `JavaScript` `TypeScript`
+`C` `C++` `C#` `Python` `PHP` `JavaScript` `TypeScript`
 
 **Frameworks & Backend**
 
@@ -61,13 +67,7 @@ I am a cybersecurity-focused developer with experience in penetration testing, O
 
 `PostgreSQL` `MySQL` `MariaDB` `SQLite` `Redis` `Firebase` `AWS` `Google Cloud`
 
-## TryHackMe
 
-<p align="center">
-  <a href="https://tryhackme.com/p/w3bk1n9">
-    <img src="./tryhackme-badge.png" alt="TryHackMe badge" />
-  </a>
-</p>
 
 ## GitHub Insights
 
