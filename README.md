@@ -1,7 +1,7 @@
 <img src="./linkedin-cover.png" width="100%" alt="Md Hasib Un Nabi banner" />
 
 <h1 align="center">Md Hasib Un Nabi (Schneho)</h1>
-<h3 align="center">Cybersecurity & OSINT Specialist | Penetration Tester | Full-Stack Developer</h3>
+<h3 align="center">Software Engineer & Cybersecurity Expert</h3>
 
 <p align="center">
   <a href="https://github.com/schnehowebking">
