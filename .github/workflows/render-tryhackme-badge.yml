@@ -1,14 +1,10 @@
 name: Render TryHackMe HTML Badge
 
 on:
-  push:
-    branches:
-      - main
-
-  workflow_dispatch:
-
   schedule:
     - cron: "7,22,37,52 * * * *"
+
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -52,10 +50,9 @@ jobs:
             });
 
             const url =
-              "https://tryhackme.com/p/" +
-              "schnehowebking" +
-              "?_=" +
-              Date.now();
+              "https://tryhackme.com/api/v2/badges/public-profile" +
+              "?userPublicId=914563" +
+              "&_=" + Date.now();
 
             console.log("Opening:", url);
 
@@ -65,72 +62,66 @@ jobs:
             });
 
             console.log("HTTP status:", response?.status());
-            console.log("Page title:", await page.title());
 
-            await page.waitForTimeout(5000);
+            /*
+             * TryHackMe renders #thm-badge dynamically.
+             * Wait until it actually exists.
+             */
+            await page.waitForSelector("#thm-badge", {
+              state: "visible",
+              timeout: 30000
+            });
 
-            // Try to find the badge.
-            const selectors = [
-              "#thm-badge",
-              "[id*='badge']",
-              "img[src*='badge']",
-              "img[alt*='TryHackMe']",
-              "svg"
-            ];
+            console.log("Found #thm-badge");
 
-            let badge = null;
+            const badge = page.locator("#thm-badge");
 
-            for (const selector of selectors) {
-              const element = page.locator(selector).first();
+            /*
+             * Make sure the badge has finished rendering.
+             */
+            await page.waitForTimeout(1000);
 
-              if (await element.count()) {
-                console.log("Found:", selector);
-                badge = element;
-                break;
-              }
+            const box = await badge.boundingBox();
+
+            console.log("Badge bounding box:", box);
+
+            if (!box) {
+              throw new Error("Could not determine badge dimensions.");
             }
 
-            if (!badge) {
-              console.log("Could not find badge element.");
-
-              await page.screenshot({
-                path: "debug-page.png",
-                fullPage: true
-              });
-
-              throw new Error(
-                "TryHackMe badge element was not found."
-              );
-            }
-
+            /*
+             * Capture ONLY the TryHackMe badge.
+             */
             await badge.screenshot({
               path: "tryhackme-badge.png"
             });
 
             console.log(
-              "TryHackMe badge screenshot created successfully."
+              "Successfully created tryhackme-badge.png"
             );
 
             await browser.close();
-          })().catch((error) => {
+          })().catch(async (error) => {
+            console.error("Badge rendering failed:");
             console.error(error);
+
             process.exit(1);
           });
           EOF
 
-      - name: Verify generated badge
+      - name: Verify badge image
         run: |
-          echo "Generated files:"
-          ls -lah
+          echo "Checking generated badge..."
 
           if [ ! -f tryhackme-badge.png ]; then
-            echo "ERROR: tryhackme-badge.png was not created."
+            echo "ERROR: tryhackme-badge.png does not exist."
             exit 1
           fi
 
+          ls -lh tryhackme-badge.png
           file tryhackme-badge.png
 
-      - name: Commit badge if changed
+      - name: Commit updated badge
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
