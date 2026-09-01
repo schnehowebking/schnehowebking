@@ -2,22 +2,31 @@
 name: Render TryHackMe HTML Badge
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
+  push:
+    branches:
+      - main
+
   workflow_dispatch:
+
+  schedule:
+    # Every 15 minutes
+    - cron: "7,22,37,52 * * * *"
+
+permissions:
+  contents: write
 
 jobs:
   render:
+    name: Render TryHackMe Badge
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -47,8 +56,9 @@ jobs:
             });
 
             const url =
-              'https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563&_=' +
-              Date.now();
+              'https://tryhackme.com/api/v2/badges/public-profile' +
+              '?userPublicId=914563' +
+              '&_=' + Date.now();
 
             console.log('Opening:', url);
 
@@ -69,21 +79,22 @@ jobs:
               path: 'tryhackme-badge.png'
             });
 
-            console.log('TryHackMe badge rendered successfully.');
+            console.log('Badge screenshot created.');
 
             await browser.close();
-          })().catch(error => {
-            console.error(error);
+          })().catch((error) => {
+            console.error('ERROR:', error);
             process.exit(1);
           });
           EOF
 
-      - name: Check generated image
+      - name: Verify badge
         run: |
+          test -f tryhackme-badge.png
           ls -lh tryhackme-badge.png
           file tryhackme-badge.png
 
-      - name: Commit and push if changed
+      - name: Commit badge
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -91,7 +102,7 @@ jobs:
           git add tryhackme-badge.png
 
           if git diff --cached --quiet; then
-            echo "No changes detected in badge."
+            echo "Badge has not changed."
           else
             git commit -m "Update TryHackMe badge"
             git push
