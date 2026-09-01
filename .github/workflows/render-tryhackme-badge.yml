@@ -1,52 +1,99 @@
+```yaml
 name: Render TryHackMe HTML Badge
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes (safe)
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:
   render:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install Playwright
         run: |
           npm init -y
           npm install playwright
-          npx playwright install chromium
+          npx playwright install --with-deps chromium
 
-      - name: Render badge from TryHackMe
+      - name: Render TryHackMe badge
         run: |
           node << 'EOF'
           const { chromium } = require('playwright');
 
           (async () => {
-            const browser = await chromium.launch();
-            const page = await browser.newPage({
-              viewport: { width: 340, height: 100 }
+            const browser = await chromium.launch({
+              headless: true
             });
 
-            await page.goto(
-              'https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563',
-              { waitUntil: 'networkidle' }
-            );
+            const page = await browser.newPage({
+              viewport: {
+                width: 340,
+                height: 100
+              },
+              deviceScaleFactor: 1
+            });
 
-            const badge = await page.$('#thm-badge');
-            await badge.screenshot({ path: 'tryhackme-badge.png' });
+            const url =
+              'https://tryhackme.com/api/v2/badges/public-profile?userPublicId=914563&_=' +
+              Date.now();
+
+            console.log('Opening:', url);
+
+            const response = await page.goto(url, {
+              waitUntil: 'networkidle',
+              timeout: 60000
+            });
+
+            console.log('HTTP status:', response?.status());
+
+            await page.waitForSelector('#thm-badge', {
+              timeout: 30000
+            });
+
+            const badge = page.locator('#thm-badge');
+
+            await badge.screenshot({
+              path: 'tryhackme-badge.png'
+            });
+
+            console.log('TryHackMe badge rendered successfully.');
 
             await browser.close();
-          })();
+          })().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
           EOF
 
-      - name: Commit image if changed
+      - name: Check generated image
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          ls -lh tryhackme-badge.png
+          file tryhackme-badge.png
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add tryhackme-badge.png
-          git diff --cached --quiet || git commit -m "Update TryHackMe badge"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No changes detected in badge."
+          else
+            git commit -m "Update TryHackMe badge"
+            git push
+          fi
+```
