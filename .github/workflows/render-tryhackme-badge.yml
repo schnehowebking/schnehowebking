@@ -8,7 +8,6 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Every 15 minutes
     - cron: "7,22,37,52 * * * *"
 
 permissions:
@@ -22,13 +21,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install Playwright
         run: |
@@ -39,7 +36,7 @@ jobs:
       - name: Render TryHackMe badge
         run: |
           node << 'EOF'
-          const { chromium } = require('playwright');
+          const { chromium } = require("playwright");
 
           (async () => {
             const browser = await chromium.launch({
@@ -48,52 +45,92 @@ jobs:
 
             const page = await browser.newPage({
               viewport: {
-                width: 340,
-                height: 100
+                width: 400,
+                height: 150
               },
               deviceScaleFactor: 1
             });
 
             const url =
-              'https://tryhackme.com/api/v2/badges/public-profile' +
-              '?userPublicId=914563' +
-              '&_=' + Date.now();
+              "https://tryhackme.com/p/" +
+              "schnehowebking" +
+              "?_=" +
+              Date.now();
 
-            console.log('Opening:', url);
+            console.log("Opening:", url);
 
             const response = await page.goto(url, {
-              waitUntil: 'networkidle',
+              waitUntil: "domcontentloaded",
               timeout: 60000
             });
 
-            console.log('HTTP status:', response?.status());
+            console.log("HTTP status:", response?.status());
+            console.log("Page title:", await page.title());
 
-            await page.waitForSelector('#thm-badge', {
-              timeout: 30000
-            });
+            await page.waitForTimeout(5000);
 
-            const badge = page.locator('#thm-badge');
+            // Try to find the badge.
+            const selectors = [
+              "#thm-badge",
+              "[id*='badge']",
+              "img[src*='badge']",
+              "img[alt*='TryHackMe']",
+              "svg"
+            ];
+
+            let badge = null;
+
+            for (const selector of selectors) {
+              const element = page.locator(selector).first();
+
+              if (await element.count()) {
+                console.log("Found:", selector);
+                badge = element;
+                break;
+              }
+            }
+
+            if (!badge) {
+              console.log("Could not find badge element.");
+
+              await page.screenshot({
+                path: "debug-page.png",
+                fullPage: true
+              });
+
+              throw new Error(
+                "TryHackMe badge element was not found."
+              );
+            }
 
             await badge.screenshot({
-              path: 'tryhackme-badge.png'
+              path: "tryhackme-badge.png"
             });
 
-            console.log('Badge screenshot created.');
+            console.log(
+              "TryHackMe badge screenshot created successfully."
+            );
 
             await browser.close();
           })().catch((error) => {
-            console.error('ERROR:', error);
+            console.error(error);
             process.exit(1);
           });
           EOF
 
-      - name: Verify badge
+      - name: Verify generated badge
         run: |
-          test -f tryhackme-badge.png
-          ls -lh tryhackme-badge.png
+          echo "Generated files:"
+          ls -lah
+
+          if [ ! -f tryhackme-badge.png ]; then
+            echo "ERROR: tryhackme-badge.png was not created."
+            exit 1
+          fi
+
           file tryhackme-badge.png
 
-      - name: Commit badge
+      - name: Commit badge if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
