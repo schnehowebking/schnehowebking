@@ -27,7 +27,7 @@
 
 ## About Me
 
-I am a software engineer and cybersecurity researcher based in Rangpur, Bangladesh, with **6+ years of software development experience**. My work combines full-stack engineering, backend systems, automation, and security research.
+I am a software engineer and cybersecurity researcher based in Rangpur, Bangladesh, with **7+ years of software development experience**. My work combines full-stack engineering, backend systems, automation, and security research.
 
 I build database-driven applications, APIs, and tools for practical use cases. My research explores network and IoT security, uncertainty-aware machine learning, and the security and reliability of large language model systems.
 
