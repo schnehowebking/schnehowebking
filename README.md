@@ -61,7 +61,7 @@ My security work includes penetration testing, OSINT, web application security, 
 - **FedCAPE-IoT** — A federated-learning research prototype comparing local, centralised, and federated approaches through synthetic experiments and ablation studies.
 - **Uncertainty-Aware RAG Security** — A research prototype for detecting indirect prompt injection using semantic features, MC Dropout, calibrated probabilities, and risk-based routing.
 - **COR-Med** — An experimental framework for evaluating linguistic overconfidence in LLM-generated medical responses, with explainable scores and comparative analysis.
-- **QRVS-30** — An exploratory survey study of human susceptibility to QR-code phishing, supported by reliability analysis and data visualisation.
+- **QRVS-25** — An exploratory survey study of human susceptibility to QR-code phishing, supported by reliability analysis and data visualisation.
 
 These projects include experimental software and research manuscripts. Their findings are interpreted within the limits of their datasets and evaluation settings; prototype results do not imply production or clinical validation.
 
