@@ -1,4 +1,4 @@
-<img src="./linkedin-cover.png" width="100%" alt="Md Hasib Un Nabi — Software Engineer and Cybersecurity Researcher" />
+<img src="./githubcoverimage.png" width="100%" alt="Md Hasib Un Nabi — Software Engineer and Cybersecurity Researcher" />
 
 <h1 align="center">Md Hasib Un Nabi (Schneho)</h1>
 <h3 align="center">Software Engineer & Cybersecurity Researcher</h3>
