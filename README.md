@@ -31,7 +31,7 @@ I am a software engineer and cybersecurity researcher based in Rangpur, Banglade
 
 I build database-driven applications, APIs, and tools for practical use cases. My research explores network and IoT security, uncertainty-aware machine learning, and the security and reliability of large language model systems.
 
-I am currently a **Research Intern at Iotelligence Vision Lab, Teesta University**, a role I have held since November 2024. I am also a student and a learner of **Computer Science and Engineering **.
+I am currently a **Research Intern at Iotelligence Vision Lab, Teesta University**, a role I have held since November 2024. I am also a student and a learner of **Computer Science and Engineering**.
 
 - **Engineering focus:** Secure web applications, backend services, API integrations, and workflow automation.
 - **Research focus:** Intrusion detection, IoT security, RAG security, LLM evaluation, and human factors in cybersecurity.
