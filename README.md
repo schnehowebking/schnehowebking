@@ -34,7 +34,7 @@ I build database-driven applications, APIs, and tools for practical use cases. M
 I am currently a **Research Intern at Iotelligence Vision Lab, Teesta University**, a role I have held since November 2024. I am also a student and a learner of **Computer Science and Engineering**.
 
 - **Engineering focus:** Secure web applications, backend services, API integrations, and workflow automation.
-- **Research focus:** Intrusion detection, IoT security, RAG security, LLM evaluation, and human factors in cybersecurity.
+- **Research focus:** IoT security, RAG security, LLM evaluation, Cybersecurity, AI security, Computer Security, SDN Security, Machine Learning, Algorithm Optimization, Cryptography
 - **Currently exploring:** .NET development and reproducible methods for evaluating AI systems.
 - **Open to collaboration:** Python, Django, security tooling, and applied research projects.
 
